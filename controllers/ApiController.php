@@ -59,10 +59,7 @@ class ApiController extends Controller
         $tempStorage = new TempStorage();
         $tempStorage->addNewRecord($dto);
 
-
-        $saved = KeyStorages::getInstance()->setData($dto);
-
-        return ['saved' => $saved];
+        return ['saved' => true];
     }
 
     /**
